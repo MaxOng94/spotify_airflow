@@ -1,0 +1,18 @@
+[2022-06-03 11:50:56,891] {processor.py:153} INFO - Started process (PID=23929) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py
+[2022-06-03 11:50:56,891] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py for tasks to queue
+[2022-06-03 11:50:56,891] {logging_mixin.py:115} INFO - [2022-06-03 11:50:56,891] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py
+[2022-06-03 11:50:56,896] {processor.py:651} INFO - DAG(s) dict_keys(['example_task_group']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py
+[2022-06-03 11:50:56,965] {logging_mixin.py:115} INFO - [2022-06-03 11:50:56,965] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_task_group
+[2022-06-03 11:50:56,976] {logging_mixin.py:115} INFO - [2022-06-03 11:50:56,976] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_task_group
+[2022-06-03 11:50:56,985] {logging_mixin.py:115} INFO - [2022-06-03 11:50:56,985] {manager.py:508} INFO - Created Permission View: can read on DAG:example_task_group
+[2022-06-03 11:50:56,985] {logging_mixin.py:115} INFO - [2022-06-03 11:50:56,985] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-03 11:50:56,994] {logging_mixin.py:115} INFO - [2022-06-03 11:50:56,994] {dag.py:2398} INFO - Creating ORM DAG for example_task_group
+[2022-06-03 11:50:57,003] {logging_mixin.py:115} INFO - [2022-06-03 11:50:57,003] {dag.py:2923} INFO - Setting next_dagrun for example_task_group to 2022-06-02T03:50:57.002909+00:00, run_after=2022-06-03T03:50:57.002909+00:00
+[2022-06-03 11:50:57,017] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py took 0.130 seconds
+[2022-06-03 11:51:32,163] {processor.py:153} INFO - Started process (PID=23963) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py
+[2022-06-03 11:51:32,174] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py for tasks to queue
+[2022-06-03 11:51:32,175] {logging_mixin.py:115} INFO - [2022-06-03 11:51:32,175] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py
+[2022-06-03 11:51:32,181] {processor.py:651} INFO - DAG(s) dict_keys(['example_task_group']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py
+[2022-06-03 11:51:32,196] {logging_mixin.py:115} INFO - [2022-06-03 11:51:32,196] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-03 11:51:32,214] {logging_mixin.py:115} INFO - [2022-06-03 11:51:32,214] {dag.py:2923} INFO - Setting next_dagrun for example_task_group to 2022-06-02T03:51:32.214546+00:00, run_after=2022-06-03T03:51:32.214546+00:00
+[2022-06-03 11:51:32,231] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py took 0.070 seconds

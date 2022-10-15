@@ -1,0 +1,24 @@
+[2022-06-03 11:51:15,088] {processor.py:153} INFO - Started process (PID=23946) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2022-06-03 11:51:15,088] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py for tasks to queue
+[2022-06-03 11:51:15,089] {logging_mixin.py:115} INFO - [2022-06-03 11:51:15,089] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2022-06-03 11:51:15,092] {processor.py:651} INFO - DAG(s) dict_keys(['example_external_task_marker_parent', 'example_external_task_marker_child']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2022-06-03 11:51:15,147] {logging_mixin.py:115} INFO - [2022-06-03 11:51:15,147] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_external_task_marker_parent
+[2022-06-03 11:51:15,159] {logging_mixin.py:115} INFO - [2022-06-03 11:51:15,159] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_external_task_marker_parent
+[2022-06-03 11:51:15,168] {logging_mixin.py:115} INFO - [2022-06-03 11:51:15,168] {manager.py:508} INFO - Created Permission View: can read on DAG:example_external_task_marker_parent
+[2022-06-03 11:51:15,194] {logging_mixin.py:115} INFO - [2022-06-03 11:51:15,194] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_external_task_marker_child
+[2022-06-03 11:51:15,202] {logging_mixin.py:115} INFO - [2022-06-03 11:51:15,202] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_external_task_marker_child
+[2022-06-03 11:51:15,211] {logging_mixin.py:115} INFO - [2022-06-03 11:51:15,211] {manager.py:508} INFO - Created Permission View: can read on DAG:example_external_task_marker_child
+[2022-06-03 11:51:15,211] {logging_mixin.py:115} INFO - [2022-06-03 11:51:15,211] {dag.py:2379} INFO - Sync 2 DAGs
+[2022-06-03 11:51:15,217] {logging_mixin.py:115} INFO - [2022-06-03 11:51:15,217] {dag.py:2398} INFO - Creating ORM DAG for example_external_task_marker_child
+[2022-06-03 11:51:15,218] {logging_mixin.py:115} INFO - [2022-06-03 11:51:15,218] {dag.py:2398} INFO - Creating ORM DAG for example_external_task_marker_parent
+[2022-06-03 11:51:15,225] {logging_mixin.py:115} INFO - [2022-06-03 11:51:15,224] {dag.py:2923} INFO - Setting next_dagrun for example_external_task_marker_child to None, run_after=None
+[2022-06-03 11:51:15,225] {logging_mixin.py:115} INFO - [2022-06-03 11:51:15,225] {dag.py:2923} INFO - Setting next_dagrun for example_external_task_marker_parent to None, run_after=None
+[2022-06-03 11:51:15,241] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py took 0.155 seconds
+[2022-06-03 11:51:49,882] {processor.py:153} INFO - Started process (PID=23980) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2022-06-03 11:51:49,883] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py for tasks to queue
+[2022-06-03 11:51:49,884] {logging_mixin.py:115} INFO - [2022-06-03 11:51:49,884] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2022-06-03 11:51:49,888] {processor.py:651} INFO - DAG(s) dict_keys(['example_external_task_marker_parent', 'example_external_task_marker_child']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2022-06-03 11:51:49,915] {logging_mixin.py:115} INFO - [2022-06-03 11:51:49,915] {dag.py:2379} INFO - Sync 2 DAGs
+[2022-06-03 11:51:49,936] {logging_mixin.py:115} INFO - [2022-06-03 11:51:49,936] {dag.py:2923} INFO - Setting next_dagrun for example_external_task_marker_child to None, run_after=None
+[2022-06-03 11:51:49,937] {logging_mixin.py:115} INFO - [2022-06-03 11:51:49,937] {dag.py:2923} INFO - Setting next_dagrun for example_external_task_marker_parent to None, run_after=None
+[2022-06-03 11:51:49,954] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py took 0.075 seconds

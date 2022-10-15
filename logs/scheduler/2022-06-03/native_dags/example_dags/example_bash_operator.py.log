@@ -1,0 +1,11 @@
+[2022-06-03 11:51:24,257] {processor.py:153} INFO - Started process (PID=23955) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_bash_operator.py
+[2022-06-03 11:51:24,258] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_bash_operator.py for tasks to queue
+[2022-06-03 11:51:24,258] {logging_mixin.py:115} INFO - [2022-06-03 11:51:24,258] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_bash_operator.py
+[2022-06-03 11:51:24,265] {processor.py:651} INFO - DAG(s) dict_keys(['example_bash_operator']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_bash_operator.py
+[2022-06-03 11:51:24,340] {logging_mixin.py:115} INFO - [2022-06-03 11:51:24,340] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_bash_operator
+[2022-06-03 11:51:24,352] {logging_mixin.py:115} INFO - [2022-06-03 11:51:24,352] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_bash_operator
+[2022-06-03 11:51:24,364] {logging_mixin.py:115} INFO - [2022-06-03 11:51:24,364] {manager.py:508} INFO - Created Permission View: can read on DAG:example_bash_operator
+[2022-06-03 11:51:24,364] {logging_mixin.py:115} INFO - [2022-06-03 11:51:24,364] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-03 11:51:24,375] {logging_mixin.py:115} INFO - [2022-06-03 11:51:24,375] {dag.py:2398} INFO - Creating ORM DAG for example_bash_operator
+[2022-06-03 11:51:24,387] {logging_mixin.py:115} INFO - [2022-06-03 11:51:24,387] {dag.py:2923} INFO - Setting next_dagrun for example_bash_operator to 2022-06-02T00:00:00+00:00, run_after=2022-06-03T00:00:00+00:00
+[2022-06-03 11:51:24,407] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_bash_operator.py took 0.151 seconds

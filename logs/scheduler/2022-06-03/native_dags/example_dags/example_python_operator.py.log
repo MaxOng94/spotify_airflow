@@ -1,0 +1,20 @@
+[2022-06-03 11:51:03,367] {processor.py:153} INFO - Started process (PID=23935) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py
+[2022-06-03 11:51:03,367] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2022-06-03 11:51:03,367] {logging_mixin.py:115} INFO - [2022-06-03 11:51:03,367] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py
+[2022-06-03 11:51:03,507] {logging_mixin.py:115} INFO - [2022-06-03 11:51:03,507] {example_python_operator.py:68} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2022-06-03 11:51:03,508] {processor.py:651} INFO - DAG(s) dict_keys(['example_python_operator']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py
+[2022-06-03 11:51:03,580] {logging_mixin.py:115} INFO - [2022-06-03 11:51:03,580] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_python_operator
+[2022-06-03 11:51:03,593] {logging_mixin.py:115} INFO - [2022-06-03 11:51:03,593] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_python_operator
+[2022-06-03 11:51:03,601] {logging_mixin.py:115} INFO - [2022-06-03 11:51:03,601] {manager.py:508} INFO - Created Permission View: can read on DAG:example_python_operator
+[2022-06-03 11:51:03,602] {logging_mixin.py:115} INFO - [2022-06-03 11:51:03,602] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-03 11:51:03,612] {logging_mixin.py:115} INFO - [2022-06-03 11:51:03,612] {dag.py:2398} INFO - Creating ORM DAG for example_python_operator
+[2022-06-03 11:51:03,620] {logging_mixin.py:115} INFO - [2022-06-03 11:51:03,620] {dag.py:2923} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2022-06-03 11:51:03,636] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py took 0.272 seconds
+[2022-06-03 11:51:38,451] {processor.py:153} INFO - Started process (PID=23969) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py
+[2022-06-03 11:51:38,462] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py for tasks to queue
+[2022-06-03 11:51:38,463] {logging_mixin.py:115} INFO - [2022-06-03 11:51:38,463] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py
+[2022-06-03 11:51:38,600] {logging_mixin.py:115} INFO - [2022-06-03 11:51:38,600] {example_python_operator.py:68} WARNING - The virtalenv_python example task requires virtualenv, please install it.
+[2022-06-03 11:51:38,600] {processor.py:651} INFO - DAG(s) dict_keys(['example_python_operator']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py
+[2022-06-03 11:51:38,612] {logging_mixin.py:115} INFO - [2022-06-03 11:51:38,612] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-03 11:51:38,627] {logging_mixin.py:115} INFO - [2022-06-03 11:51:38,627] {dag.py:2923} INFO - Setting next_dagrun for example_python_operator to None, run_after=None
+[2022-06-03 11:51:38,643] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py took 0.193 seconds

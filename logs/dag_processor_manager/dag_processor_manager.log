@@ -1,0 +1,430 @@
+[2022-06-03 11:50:50,737] {manager.py:477} INFO - Processing files using up to 1 processes at a time 
+[2022-06-03 11:50:50,738] {manager.py:478} INFO - Process each file at most once every 30 seconds
+[2022-06-03 11:50:50,738] {manager.py:479} INFO - Checking for new files in /home/maxong/airflow/dags every 300 seconds
+[2022-06-03 11:50:50,738] {manager.py:687} INFO - Searching for files in /home/maxong/airflow/dags
+[2022-06-03 11:50:50,754] {manager.py:690} INFO - There are 34 files in /home/maxong/airflow/dags
+[2022-06-03 11:50:50,980] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_short_circuit_operator.py                                    0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcom.py                                                      0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_kubernetes_executor.py                                       0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_labels.py                                             0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator_decorator.py                                 0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_dag_decorator.py                                             0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py                                                0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_complex.py                                                   0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_etl_dag.py                                                  0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py                                                  0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py                                         0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial.py                                                          0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py                               0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_latest_only.py                                               0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py                                           0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_sla_dag.py                                                   0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py                              0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py                                           0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_nested_branch_dag.py                                         0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_time_delta_sensor_async.py                                   0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_bash_operator.py                                             0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_datetime_operator.py                                  0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group_decorator.py                                      0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py                              0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_local_kubernetes_executor.py                                 0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_controller_dag.py                                    0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_latest_only_with_trigger.py                                  0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py                                        0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_subdag_operator.py                                           0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py                                  0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py                                                  0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/subdags/subdag.py                                                    0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/plugins/workday.py                                                   0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_passing_params_via_test_command.py                           1           0  0.20s           2022-06-03T03:50:50
+================================================================================
+[2022-06-03 11:51:21,199] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_kubernetes_executor.py                                       0           0  0.10s           2022-06-03T03:50:54
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py                               0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py                              0           0  0.20s           2022-06-03T03:51:05
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py                                           0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_bash_operator.py                                             0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_datetime_operator.py                                  0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py                              0           0
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_local_kubernetes_executor.py                                 0           0  0.10s           2022-06-03T03:51:09
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/subdags/subdag.py                                                    0           0  0.10s           2022-06-03T03:51:16
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/plugins/workday.py                                                   0           0  0.10s           2022-06-03T03:51:17
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_passing_params_via_test_command.py                           1           0  0.20s           2022-06-03T03:50:50
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_short_circuit_operator.py                                    1           0  0.20s           2022-06-03T03:50:52
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcom.py                                                      1           0  0.20s           2022-06-03T03:50:53
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_labels.py                                             1           0  0.20s           2022-06-03T03:51:19
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator_decorator.py                                 1           0  0.20s           2022-06-03T03:51:20
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_dag_decorator.py                                             1           0  0.20s           2022-06-03T03:50:55
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py                                                1           0  0.20s           2022-06-03T03:50:57
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_complex.py                                                   1           0  0.20s           2022-06-03T03:51:21
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_etl_dag.py                                                  1           0  0.20s           2022-06-03T03:50:58
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py                                                  1           0  0.20s           2022-06-03T03:50:59
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py                                         1           0  0.20s           2022-06-03T03:51:00
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial.py                                                          1           0  0.20s           2022-06-03T03:51:01
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_latest_only.py                                               1           0  0.20s           2022-06-03T03:51:02
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py                                           1           0  0.30s           2022-06-03T03:51:03
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_sla_dag.py                                                   1           0  0.20s           2022-06-03T03:51:04
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_nested_branch_dag.py                                         1           0  0.20s           2022-06-03T03:51:06
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_time_delta_sensor_async.py                                   1           0  0.20s           2022-06-03T03:51:07
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group_decorator.py                                      1           0  0.20s           2022-06-03T03:51:08
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_controller_dag.py                                    1           0  0.20s           2022-06-03T03:51:11
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_latest_only_with_trigger.py                                  1           0  0.20s           2022-06-03T03:51:11
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py                                        1           0  0.20s           2022-06-03T03:51:12
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py                                  2           0  0.20s           2022-06-03T03:51:15
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py                                                  2           0  0.20s           2022-06-03T03:51:16
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_subdag_operator.py                                           3           0  0.20s           2022-06-03T03:51:14
+================================================================================
+[2022-06-03 11:51:51,469] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                        PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+---------------------------------------------------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_kubernetes_executor.py                                       0           0  0.10s           2022-06-03T03:51:30
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py                              0           0  0.20s           2022-06-03T03:51:41
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_local_kubernetes_executor.py                                 0           0  0.10s           2022-06-03T03:51:44
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/subdags/subdag.py                                                    0           0  0.10s           2022-06-03T03:51:51
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/plugins/workday.py                                                   0           0  0.10s           2022-06-03T03:51:17
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_passing_params_via_test_command.py                           1           0  0.10s           2022-06-03T03:51:27
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_short_circuit_operator.py                                    1           0  0.10s           2022-06-03T03:51:28
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcom.py                                                      1           0  0.20s           2022-06-03T03:51:29
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_labels.py                                             1           0  0.20s           2022-06-03T03:51:19
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator_decorator.py                                 1           0  0.20s           2022-06-03T03:51:20
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_dag_decorator.py                                             1           0  0.10s           2022-06-03T03:51:31
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group.py                                                1           0  0.10s           2022-06-03T03:51:32
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_complex.py                                                   1           0  0.20s           2022-06-03T03:51:21
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_etl_dag.py                                                  1           0  0.10s           2022-06-03T03:51:33
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py                                                  1           0  0.10s           2022-06-03T03:51:34
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py                                         1           0  0.10s           2022-06-03T03:51:35
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial.py                                                          1           0  0.10s           2022-06-03T03:51:36
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_day_of_week_operator.py                               1           0  0.20s           2022-06-03T03:51:21
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_latest_only.py                                               1           0  0.10s           2022-06-03T03:51:37
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_python_operator.py                                           1           0  0.20s           2022-06-03T03:51:38
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_sla_dag.py                                                   1           0  0.10s           2022-06-03T03:51:39
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_operator.py                                           1           0  0.20s           2022-06-03T03:51:23
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_nested_branch_dag.py                                         1           0  0.10s           2022-06-03T03:51:41
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_time_delta_sensor_async.py                                   1           0  0.11s           2022-06-03T03:51:42
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_bash_operator.py                                             1           0  0.20s           2022-06-03T03:51:24
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_datetime_operator.py                                  1           0  0.20s           2022-06-03T03:51:25
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_task_group_decorator.py                                      1           0  0.20s           2022-06-03T03:51:43
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py                              1           0  0.20s           2022-06-03T03:51:26
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_controller_dag.py                                    1           0  0.10s           2022-06-03T03:51:46
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_latest_only_with_trigger.py                                  1           0  0.10s           2022-06-03T03:51:47
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py                                        1           0  0.10s           2022-06-03T03:51:47
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_external_task_marker_dag.py                                  2           0  0.10s           2022-06-03T03:51:49
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py                                                  2           0  0.10s           2022-06-03T03:51:51
+/home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_subdag_operator.py                                           3           0  0.10s           2022-06-03T03:51:48
+================================================================================
+[2022-06-03 11:51:55,994] {manager.py:458} INFO - Exiting gracefully upon receiving signal 15
+[2022-06-20 16:16:37,950] {manager.py:477} INFO - Processing files using up to 1 processes at a time 
+[2022-06-20 16:16:37,951] {manager.py:478} INFO - Process each file at most once every 30 seconds
+[2022-06-20 16:16:37,951] {manager.py:479} INFO - Checking for new files in /home/maxong/airflow/dags every 300 seconds
+[2022-06-20 16:16:37,951] {manager.py:687} INFO - Searching for files in /home/maxong/airflow/dags
+[2022-06-20 16:16:37,952] {manager.py:690} INFO - There are 2 files in /home/maxong/airflow/dags
+[2022-06-20 16:16:38,330] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/tutorial.py                           0           0
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.20s           2022-06-20T08:16:38
+================================================================================
+[2022-06-20 16:17:10,005] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:17:06
+/home/maxong/airflow/dags/tutorial.py                           1           0  2.01s           2022-06-20T08:17:10
+================================================================================
+[2022-06-20 16:17:41,007] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:17:39
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:17:41
+================================================================================
+[2022-06-20 16:18:11,272] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:18:11
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:18:10
+================================================================================
+[2022-06-20 16:18:41,504] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:18:40
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:18:41
+================================================================================
+[2022-06-20 16:19:11,767] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:19:11
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:19:11
+================================================================================
+[2022-06-20 16:19:42,031] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:19:42
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:19:40
+================================================================================
+[2022-06-20 16:20:12,304] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:20:12
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:20:11
+================================================================================
+[2022-06-20 16:20:42,573] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:20:41
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:20:42
+================================================================================
+[2022-06-20 16:21:12,834] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:21:12
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:21:12
+================================================================================
+[2022-06-20 16:21:39,083] {manager.py:687} INFO - Searching for files in /home/maxong/airflow/dags
+[2022-06-20 16:21:39,085] {manager.py:690} INFO - There are 2 files in /home/maxong/airflow/dags
+[2022-06-20 16:21:43,094] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:21:43
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:21:42
+================================================================================
+[2022-06-20 16:22:13,346] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:22:13
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:22:12
+================================================================================
+[2022-06-20 16:22:43,605] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:22:43
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:22:43
+================================================================================
+[2022-06-20 16:23:13,750] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:23:13
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:23:12
+================================================================================
+[2022-06-20 16:23:44,015] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:23:43
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:23:44
+================================================================================
+[2022-06-20 16:24:14,255] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:24:13
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:24:14
+================================================================================
+[2022-06-20 16:24:44,513] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:24:44
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:24:44
+================================================================================
+[2022-06-20 16:25:14,780] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:25:14
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:25:13
+================================================================================
+[2022-06-20 16:25:45,045] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:25:45
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:25:44
+================================================================================
+[2022-06-20 16:26:15,306] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:26:15
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:26:14
+================================================================================
+[2022-06-20 16:26:39,221] {manager.py:687} INFO - Searching for files in /home/maxong/airflow/dags
+[2022-06-20 16:26:39,223] {manager.py:690} INFO - There are 2 files in /home/maxong/airflow/dags
+[2022-06-20 16:26:45,576] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.11s           2022-06-20T08:26:45
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:26:44
+================================================================================
+[2022-06-20 16:27:15,833] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:27:15
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:27:15
+================================================================================
+[2022-06-20 16:27:46,091] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:27:44
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:27:46
+================================================================================
+[2022-06-20 16:28:16,360] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:28:16
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:28:15
+================================================================================
+[2022-06-20 16:28:46,596] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:28:45
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:28:46
+================================================================================
+[2022-06-20 16:29:16,864] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:29:16
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:29:16
+================================================================================
+[2022-06-20 16:29:47,125] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:29:47
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:29:46
+================================================================================
+[2022-06-20 16:30:17,391] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:30:17
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:30:16
+================================================================================
+[2022-06-20 16:30:47,665] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-06-20T08:30:47
+/home/maxong/airflow/dags/tutorial.py                           1           0  0.10s           2022-06-20T08:30:47
+================================================================================
+[2022-06-20 16:31:00,777] {manager.py:458} INFO - Exiting gracefully upon receiving signal 15
+[2022-06-20 21:46:37,400] {manager.py:477} INFO - Processing files using up to 1 processes at a time 
+[2022-06-20 21:46:37,400] {manager.py:478} INFO - Process each file at most once every 30 seconds
+[2022-06-20 21:46:37,400] {manager.py:479} INFO - Checking for new files in /home/maxong/airflow/dags every 300 seconds
+[2022-06-20 21:46:37,400] {manager.py:687} INFO - Searching for files in /home/maxong/airflow/dags
+[2022-06-20 21:46:37,401] {manager.py:690} INFO - There are 2 files in /home/maxong/airflow/dags
+[2022-06-20 21:46:37,869] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/tutorial.py                           0           0
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.20s           2022-06-20T13:46:37
+================================================================================
+[2022-06-20 21:46:58,318] {manager.py:458} INFO - Exiting gracefully upon receiving signal 15
+[2022-10-12 10:28:55,506] {manager.py:477} INFO - Processing files using up to 1 processes at a time 
+[2022-10-12 10:28:55,506] {manager.py:478} INFO - Process each file at most once every 30 seconds
+[2022-10-12 10:28:55,507] {manager.py:479} INFO - Checking for new files in /home/maxong/airflow/dags every 300 seconds
+[2022-10-12 10:28:55,507] {manager.py:687} INFO - Searching for files in /home/maxong/airflow/dags
+[2022-10-12 10:28:55,508] {manager.py:690} INFO - There are 2 files in /home/maxong/airflow/dags
+[2022-10-12 10:28:55,764] {manager.py:806} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                              PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/home/maxong/airflow/dags/tutorial.py                           0           0
+/home/maxong/airflow/dags/my_dag.py                             1           0  0.10s           2022-10-12T02:28:55
+================================================================================
+[2022-10-12 10:29:03,833] {manager.py:458} INFO - Exiting gracefully upon receiving signal 15

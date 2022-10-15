@@ -1,0 +1,18 @@
+[2022-06-03 11:51:00,593] {processor.py:153} INFO - Started process (PID=23932) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py
+[2022-06-03 11:51:00,593] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py for tasks to queue
+[2022-06-03 11:51:00,594] {logging_mixin.py:115} INFO - [2022-06-03 11:51:00,594] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py
+[2022-06-03 11:51:00,606] {processor.py:651} INFO - DAG(s) dict_keys(['tutorial_taskflow_api_etl']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py
+[2022-06-03 11:51:00,663] {logging_mixin.py:115} INFO - [2022-06-03 11:51:00,663] {manager.py:508} INFO - Created Permission View: can edit on DAG:tutorial_taskflow_api_etl
+[2022-06-03 11:51:00,674] {logging_mixin.py:115} INFO - [2022-06-03 11:51:00,674] {manager.py:508} INFO - Created Permission View: can delete on DAG:tutorial_taskflow_api_etl
+[2022-06-03 11:51:00,685] {logging_mixin.py:115} INFO - [2022-06-03 11:51:00,685] {manager.py:508} INFO - Created Permission View: can read on DAG:tutorial_taskflow_api_etl
+[2022-06-03 11:51:00,686] {logging_mixin.py:115} INFO - [2022-06-03 11:51:00,686] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-03 11:51:00,692] {logging_mixin.py:115} INFO - [2022-06-03 11:51:00,692] {dag.py:2398} INFO - Creating ORM DAG for tutorial_taskflow_api_etl
+[2022-06-03 11:51:00,699] {logging_mixin.py:115} INFO - [2022-06-03 11:51:00,699] {dag.py:2923} INFO - Setting next_dagrun for tutorial_taskflow_api_etl to None, run_after=None
+[2022-06-03 11:51:00,715] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py took 0.126 seconds
+[2022-06-03 11:51:35,564] {processor.py:153} INFO - Started process (PID=23966) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py
+[2022-06-03 11:51:35,575] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py for tasks to queue
+[2022-06-03 11:51:35,575] {logging_mixin.py:115} INFO - [2022-06-03 11:51:35,575] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py
+[2022-06-03 11:51:35,588] {processor.py:651} INFO - DAG(s) dict_keys(['tutorial_taskflow_api_etl']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py
+[2022-06-03 11:51:35,628] {logging_mixin.py:115} INFO - [2022-06-03 11:51:35,628] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-03 11:51:35,642] {logging_mixin.py:115} INFO - [2022-06-03 11:51:35,642] {dag.py:2923} INFO - Setting next_dagrun for tutorial_taskflow_api_etl to None, run_after=None
+[2022-06-03 11:51:35,661] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl.py took 0.099 seconds

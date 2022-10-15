@@ -1,0 +1,7 @@
+[2022-10-12 10:28:55,665] {processor.py:153} INFO - Started process (PID=1598) to work on /home/maxong/airflow/dags/my_dag.py
+[2022-10-12 10:28:55,665] {processor.py:641} INFO - Processing file /home/maxong/airflow/dags/my_dag.py for tasks to queue
+[2022-10-12 10:28:55,666] {logging_mixin.py:115} INFO - [2022-10-12 10:28:55,666] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/airflow/dags/my_dag.py
+[2022-10-12 10:28:55,672] {processor.py:651} INFO - DAG(s) dict_keys(['my_dag']) retrieved from /home/maxong/airflow/dags/my_dag.py
+[2022-10-12 10:28:55,679] {logging_mixin.py:115} INFO - [2022-10-12 10:28:55,679] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-10-12 10:28:55,688] {logging_mixin.py:115} INFO - [2022-10-12 10:28:55,688] {dag.py:2923} INFO - Setting next_dagrun for my_dag to 2022-10-11T00:00:00+00:00, run_after=2022-10-12T00:00:00+00:00
+[2022-10-12 10:28:55,698] {processor.py:161} INFO - Processing /home/maxong/airflow/dags/my_dag.py took 0.034 seconds

@@ -1,0 +1,11 @@
+[2022-06-03 11:51:26,721] {processor.py:153} INFO - Started process (PID=23957) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-03 11:51:26,721] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py for tasks to queue
+[2022-06-03 11:51:26,722] {logging_mixin.py:115} INFO - [2022-06-03 11:51:26,722] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-03 11:51:26,729] {processor.py:651} INFO - DAG(s) dict_keys(['example_branch_dop_operator_v3']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+[2022-06-03 11:51:26,794] {logging_mixin.py:115} INFO - [2022-06-03 11:51:26,794] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_branch_dop_operator_v3
+[2022-06-03 11:51:26,805] {logging_mixin.py:115} INFO - [2022-06-03 11:51:26,805] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_branch_dop_operator_v3
+[2022-06-03 11:51:26,814] {logging_mixin.py:115} INFO - [2022-06-03 11:51:26,814] {manager.py:508} INFO - Created Permission View: can read on DAG:example_branch_dop_operator_v3
+[2022-06-03 11:51:26,814] {logging_mixin.py:115} INFO - [2022-06-03 11:51:26,814] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-03 11:51:26,825] {logging_mixin.py:115} INFO - [2022-06-03 11:51:26,825] {dag.py:2398} INFO - Creating ORM DAG for example_branch_dop_operator_v3
+[2022-06-03 11:51:26,837] {logging_mixin.py:115} INFO - [2022-06-03 11:51:26,837] {dag.py:2923} INFO - Setting next_dagrun for example_branch_dop_operator_v3 to 2022-06-03T03:50:00+00:00, run_after=2022-06-03T03:51:00+00:00
+[2022-06-03 11:51:26,855] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py took 0.135 seconds

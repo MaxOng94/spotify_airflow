@@ -1,0 +1,18 @@
+[2022-06-03 11:51:12,625] {processor.py:153} INFO - Started process (PID=23944) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2022-06-03 11:51:12,625] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2022-06-03 11:51:12,626] {logging_mixin.py:115} INFO - [2022-06-03 11:51:12,626] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2022-06-03 11:51:12,640] {processor.py:651} INFO - DAG(s) dict_keys(['example_trigger_target_dag']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2022-06-03 11:51:12,699] {logging_mixin.py:115} INFO - [2022-06-03 11:51:12,699] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_trigger_target_dag
+[2022-06-03 11:51:12,711] {logging_mixin.py:115} INFO - [2022-06-03 11:51:12,711] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_trigger_target_dag
+[2022-06-03 11:51:12,720] {logging_mixin.py:115} INFO - [2022-06-03 11:51:12,720] {manager.py:508} INFO - Created Permission View: can read on DAG:example_trigger_target_dag
+[2022-06-03 11:51:12,720] {logging_mixin.py:115} INFO - [2022-06-03 11:51:12,720] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-03 11:51:12,726] {logging_mixin.py:115} INFO - [2022-06-03 11:51:12,725] {dag.py:2398} INFO - Creating ORM DAG for example_trigger_target_dag
+[2022-06-03 11:51:12,733] {logging_mixin.py:115} INFO - [2022-06-03 11:51:12,732] {dag.py:2923} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2022-06-03 11:51:12,748] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.125 seconds
+[2022-06-03 11:51:47,604] {processor.py:153} INFO - Started process (PID=23978) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2022-06-03 11:51:47,615] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2022-06-03 11:51:47,616] {logging_mixin.py:115} INFO - [2022-06-03 11:51:47,616] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2022-06-03 11:51:47,633] {processor.py:651} INFO - DAG(s) dict_keys(['example_trigger_target_dag']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2022-06-03 11:51:47,645] {logging_mixin.py:115} INFO - [2022-06-03 11:51:47,645] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-03 11:51:47,662] {logging_mixin.py:115} INFO - [2022-06-03 11:51:47,662] {dag.py:2923} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2022-06-03 11:51:47,677] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.075 seconds

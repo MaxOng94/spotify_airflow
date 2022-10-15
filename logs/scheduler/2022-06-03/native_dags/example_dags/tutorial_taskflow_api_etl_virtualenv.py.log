@@ -1,0 +1,12 @@
+[2022-06-03 11:51:05,763] {processor.py:153} INFO - Started process (PID=23937) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py
+[2022-06-03 11:51:05,763] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py for tasks to queue
+[2022-06-03 11:51:05,763] {logging_mixin.py:115} INFO - [2022-06-03 11:51:05,763] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py
+[2022-06-03 11:51:05,882] {logging_mixin.py:115} INFO - [2022-06-03 11:51:05,882] {tutorial_taskflow_api_etl_virtualenv.py:29} WARNING - The tutorial_taskflow_api_etl_virtualenv example DAG requires virtualenv, please install it.
+[2022-06-03 11:51:05,883] {processor.py:653} WARNING - No viable dags retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py
+[2022-06-03 11:51:05,891] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py took 0.130 seconds
+[2022-06-03 11:51:40,811] {processor.py:153} INFO - Started process (PID=23971) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py
+[2022-06-03 11:51:40,822] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py for tasks to queue
+[2022-06-03 11:51:40,822] {logging_mixin.py:115} INFO - [2022-06-03 11:51:40,822] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py
+[2022-06-03 11:51:40,932] {logging_mixin.py:115} INFO - [2022-06-03 11:51:40,931] {tutorial_taskflow_api_etl_virtualenv.py:29} WARNING - The tutorial_taskflow_api_etl_virtualenv example DAG requires virtualenv, please install it.
+[2022-06-03 11:51:40,932] {processor.py:653} WARNING - No viable dags retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py
+[2022-06-03 11:51:40,938] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/tutorial_taskflow_api_etl_virtualenv.py took 0.129 seconds

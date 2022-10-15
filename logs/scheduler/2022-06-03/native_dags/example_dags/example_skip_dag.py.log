@@ -1,0 +1,18 @@
+[2022-06-03 11:50:59,363] {processor.py:153} INFO - Started process (PID=23931) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py
+[2022-06-03 11:50:59,363] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py for tasks to queue
+[2022-06-03 11:50:59,364] {logging_mixin.py:115} INFO - [2022-06-03 11:50:59,364] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py
+[2022-06-03 11:50:59,368] {processor.py:651} INFO - DAG(s) dict_keys(['example_skip_dag']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py
+[2022-06-03 11:50:59,460] {logging_mixin.py:115} INFO - [2022-06-03 11:50:59,460] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_skip_dag
+[2022-06-03 11:50:59,473] {logging_mixin.py:115} INFO - [2022-06-03 11:50:59,473] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_skip_dag
+[2022-06-03 11:50:59,487] {logging_mixin.py:115} INFO - [2022-06-03 11:50:59,487] {manager.py:508} INFO - Created Permission View: can read on DAG:example_skip_dag
+[2022-06-03 11:50:59,487] {logging_mixin.py:115} INFO - [2022-06-03 11:50:59,487] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-03 11:50:59,495] {logging_mixin.py:115} INFO - [2022-06-03 11:50:59,495] {dag.py:2398} INFO - Creating ORM DAG for example_skip_dag
+[2022-06-03 11:50:59,506] {logging_mixin.py:115} INFO - [2022-06-03 11:50:59,506] {dag.py:2923} INFO - Setting next_dagrun for example_skip_dag to 2022-06-02T03:50:59.505775+00:00, run_after=2022-06-03T03:50:59.505775+00:00
+[2022-06-03 11:50:59,527] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py took 0.168 seconds
+[2022-06-03 11:51:34,434] {processor.py:153} INFO - Started process (PID=23965) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py
+[2022-06-03 11:51:34,443] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py for tasks to queue
+[2022-06-03 11:51:34,443] {logging_mixin.py:115} INFO - [2022-06-03 11:51:34,443] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py
+[2022-06-03 11:51:34,448] {processor.py:651} INFO - DAG(s) dict_keys(['example_skip_dag']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py
+[2022-06-03 11:51:34,466] {logging_mixin.py:115} INFO - [2022-06-03 11:51:34,466] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-06-03 11:51:34,482] {logging_mixin.py:115} INFO - [2022-06-03 11:51:34,482] {dag.py:2923} INFO - Setting next_dagrun for example_skip_dag to 2022-06-02T03:51:34.482119+00:00, run_after=2022-06-03T03:51:34.482119+00:00
+[2022-06-03 11:51:34,497] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_skip_dag.py took 0.065 seconds

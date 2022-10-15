@@ -1,0 +1,24 @@
+[2022-06-03 11:51:16,315] {processor.py:153} INFO - Started process (PID=23947) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-06-03 11:51:16,316] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2022-06-03 11:51:16,316] {logging_mixin.py:115} INFO - [2022-06-03 11:51:16,316] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-06-03 11:51:16,336] {processor.py:651} INFO - DAG(s) dict_keys(['example_xcom_args', 'example_xcom_args_with_operators']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-06-03 11:51:16,405] {logging_mixin.py:115} INFO - [2022-06-03 11:51:16,405] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_xcom_args
+[2022-06-03 11:51:16,416] {logging_mixin.py:115} INFO - [2022-06-03 11:51:16,416] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_xcom_args
+[2022-06-03 11:51:16,424] {logging_mixin.py:115} INFO - [2022-06-03 11:51:16,424] {manager.py:508} INFO - Created Permission View: can read on DAG:example_xcom_args
+[2022-06-03 11:51:16,443] {logging_mixin.py:115} INFO - [2022-06-03 11:51:16,443] {manager.py:508} INFO - Created Permission View: can edit on DAG:example_xcom_args_with_operators
+[2022-06-03 11:51:16,451] {logging_mixin.py:115} INFO - [2022-06-03 11:51:16,451] {manager.py:508} INFO - Created Permission View: can delete on DAG:example_xcom_args_with_operators
+[2022-06-03 11:51:16,459] {logging_mixin.py:115} INFO - [2022-06-03 11:51:16,459] {manager.py:508} INFO - Created Permission View: can read on DAG:example_xcom_args_with_operators
+[2022-06-03 11:51:16,459] {logging_mixin.py:115} INFO - [2022-06-03 11:51:16,459] {dag.py:2379} INFO - Sync 2 DAGs
+[2022-06-03 11:51:16,465] {logging_mixin.py:115} INFO - [2022-06-03 11:51:16,465] {dag.py:2398} INFO - Creating ORM DAG for example_xcom_args
+[2022-06-03 11:51:16,465] {logging_mixin.py:115} INFO - [2022-06-03 11:51:16,465] {dag.py:2398} INFO - Creating ORM DAG for example_xcom_args_with_operators
+[2022-06-03 11:51:16,472] {logging_mixin.py:115} INFO - [2022-06-03 11:51:16,472] {dag.py:2923} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2022-06-03 11:51:16,473] {logging_mixin.py:115} INFO - [2022-06-03 11:51:16,472] {dag.py:2923} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2022-06-03 11:51:16,487] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py took 0.174 seconds
+[2022-06-03 11:51:51,017] {processor.py:153} INFO - Started process (PID=23981) to work on /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-06-03 11:51:51,029] {processor.py:641} INFO - Processing file /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2022-06-03 11:51:51,030] {logging_mixin.py:115} INFO - [2022-06-03 11:51:51,029] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-06-03 11:51:51,046] {processor.py:651} INFO - DAG(s) dict_keys(['example_xcom_args', 'example_xcom_args_with_operators']) retrieved from /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py
+[2022-06-03 11:51:51,078] {logging_mixin.py:115} INFO - [2022-06-03 11:51:51,078] {dag.py:2379} INFO - Sync 2 DAGs
+[2022-06-03 11:51:51,092] {logging_mixin.py:115} INFO - [2022-06-03 11:51:51,092] {dag.py:2923} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2022-06-03 11:51:51,092] {logging_mixin.py:115} INFO - [2022-06-03 11:51:51,092] {dag.py:2923} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2022-06-03 11:51:51,106] {processor.py:161} INFO - Processing /home/maxong/.local/lib/python3.8/site-packages/airflow/example_dags/example_xcomargs.py took 0.091 seconds

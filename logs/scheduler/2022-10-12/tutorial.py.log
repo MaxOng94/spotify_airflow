@@ -1,0 +1,7 @@
+[2022-10-12 10:28:56,799] {processor.py:153} INFO - Started process (PID=1604) to work on /home/maxong/airflow/dags/tutorial.py
+[2022-10-12 10:28:56,799] {processor.py:641} INFO - Processing file /home/maxong/airflow/dags/tutorial.py for tasks to queue
+[2022-10-12 10:28:56,800] {logging_mixin.py:115} INFO - [2022-10-12 10:28:56,800] {dagbag.py:507} INFO - Filling up the DagBag from /home/maxong/airflow/dags/tutorial.py
+[2022-10-12 10:28:56,805] {processor.py:651} INFO - DAG(s) dict_keys(['my_dag']) retrieved from /home/maxong/airflow/dags/tutorial.py
+[2022-10-12 10:28:56,826] {logging_mixin.py:115} INFO - [2022-10-12 10:28:56,826] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-10-12 10:28:56,835] {logging_mixin.py:115} INFO - [2022-10-12 10:28:56,835] {dag.py:2923} INFO - Setting next_dagrun for my_dag to 2022-10-11T00:00:00+00:00, run_after=2022-10-12T00:00:00+00:00
+[2022-10-12 10:28:56,845] {processor.py:161} INFO - Processing /home/maxong/airflow/dags/tutorial.py took 0.047 seconds
