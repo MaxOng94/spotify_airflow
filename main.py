@@ -100,6 +100,7 @@ def update_database(DB_LOCATION,songs_table):
     # update database 
     try: 
         songs_table.to_sql(name = 'james_played_tracks',con = engine, if_exists= 'append',index = False)
+        print("New songs populated in database!")
     except: 
         print("Data already exists in database")
     # conn.close()
@@ -115,13 +116,12 @@ if __name__ == '__main__':
     #     "Authorization" : "Bearer {token}".format(token=TOKEN)
     # }
 
-    today = datetime.datetime.now()
+    today = datetime.datetime.now().replace(hour = 0,second = 0,minute =0,microsecond=0)
     # because everyday we want to see the songs we've listed to for the 
     # previous 24 hrs
     yesterday = today - datetime.timedelta(days =1)
     # unix timestamp in miliseconds, that's why need to * 1000
     yesterday_unix_timestamp = int(yesterday.timestamp()) * 1000
-
 
     # r = requests.get(WEBSITE.format(time=yesterday_unix_timestamp),headers = headers)
     # get data in json form
@@ -151,19 +151,17 @@ if __name__ == '__main__':
 
                 # update database
                 update_database(DB_LOCATION,songs_table)
+
+                # once you updated the database, break out of the loop
                 break
             # if there are no data that day, don't even open up the database, skip that day    
             else:
-                print("No songs played today")
+                print("No songs played yesterday")
+                # if there are no songs, break out 
+                break 
         except:
             print("Error with database or spotify data returned")
     
 
 
-    # print(CONF_PATH)
-    # print(cf_parser.get('spotify_details','user_id'))
-    # print(cf_parser.get('sqlite','db_location'))
-    # print(r)
-    # data = r.json()
-    # print(data)
 
