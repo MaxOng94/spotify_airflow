@@ -1,52 +1,30 @@
 
 
 # require to wrap all our import libraries within the spotify function 
-from airflow.decorators import dag, task
-from airflow import DAG
-from datetime import datetime
-from datetime import timedelta
-from airflow.operators.python import PythonOperator, BranchPythonOperator
-from airflow.operators.bash import BashOperator
-from airflow.utils.dates import days_ago 
-import pathlib
-import pandas as pd 
-import sqlalchemy 
-import configparser as ConfigParser
-import spotipy
-from spotipy.oauth2 import SpotifyOAuth
+from airflow.decorators import task
 
-# set some default arguments to be used across every operator
-default_args = {
-    'owner':'airflow',
-    'depends_on_past':False,
-    'start_date' : datetime(2022,10,17),
-    'retries':1,
-    'retry_delay': timedelta(minutes=1),
-    'email_on_failure':True ,
-    'email':['max_ong_@outlook.com'],
-    'email_on_retry':False,
-    'schedule_interval': '@daily'
-    }
-
-# all operators inherit from the baseoperator 
-
-# define our dag 
-@dag(
-   'spotify_dag_new',
-   schedule_interval= '@daily'    # default_args = default_args
-    )
-# @task.virtualenv(task_id="virtualenv_python", requirements=["pandas==1.5.0"], system_site_packages=False)
+# there's a reason to 
+# https://stackoverflow.com/questions/64202437/airflow-got-an-unexpected-keyword-argument-conf
+@task.virtualenv(task_id="virtualenv_python", requirements=["pandas==1.5.0"], system_site_packages=False)
 def full_spotify_etl_function(**kwargs):
-   
+
 # ,"SQLAlchemy==1.4.41","spotipy==2.20.0"
+    import pandas as pd 
+    import sqlalchemy 
+    import datetime 
+    import configparser as ConfigParser
+    import pathlib
+    import spotipy
+    from spotipy.oauth2 import SpotifyOAuth
+
 
 
 
     # config values ======================================
     CURRENT_PATH_DIR= pathlib.Path(__file__).absolute()
-    GRANDPARENT_PATH = pathlib.Path(__file__).absolute().parents[1]
+    PARENT_PATH = pathlib.Path(__file__).parent.absolute()
 
-    CONF_PATH = GRANDPARENT_PATH.joinpath("configuration/config.ini")
+    CONF_PATH = PARENT_PATH.joinpath("configuration/config.ini")
 
     cf_parser= ConfigParser.ConfigParser()
     cf_parser.read(CONF_PATH)
@@ -106,12 +84,12 @@ def full_spotify_etl_function(**kwargs):
 
         return auth_manager,spotify
 
-    def refresh_spotify(auth_manager, spotify,config_dictionary):
+    def refresh_spotify(auth_manager, spotify):
 
         token_info = auth_manager.cache_handler.get_cached_token()
 
         if auth_manager.is_token_expired(token_info):
-            auth_manager, spotify = create_spotify(config_dictionary)
+            auth_manager, spotify = create_spotify()
         return auth_manager, spotify
     #=====================================================================
 
@@ -142,21 +120,18 @@ def full_spotify_etl_function(**kwargs):
         print("database closed successfully")
 
 
-    # there's a reason to 
-    # https://stackoverflow.com/questions/64202437/airflow-got-an-unexpected-keyword-argument-conf
-    # @task.virtualenv(task_id="virtualenv_python", requirements=["pandas==1.5.0"], system_site_packages=False)
-    def run_spotify_etl(config_dictionary):
 
+    def run_spotify_etl(config_dictionary):
        # headers = {
         #     "Accept": "application/json",
         #     "Content-Type": "application/json",
         #     "Authorization" : "Bearer {token}".format(token=TOKEN)
         # }
 
-        today = datetime.now()
+        today = datetime.datetime.now()
         # because everyday we want to see the songs we've listed to for the 
         # previous 24 hrs
-        yesterday = today - timedelta(days =1)
+        yesterday = today - datetime.timedelta(days =1)
         # unix timestamp in miliseconds, that's why need to * 1000
         yesterday_unix_timestamp = int(yesterday.timestamp()) * 1000
 
@@ -167,7 +142,7 @@ def full_spotify_etl_function(**kwargs):
         auth_manager, spotify = create_spotify(config_dictionary)
 
         while True:
-            auth_manager, spotify = refresh_spotify(auth_manager, spotify,config_dictionary)
+            auth_manager, spotify = refresh_spotify(auth_manager, spotify)
             data = spotify.current_user_recently_played(after =yesterday_unix_timestamp)
 
             try:
@@ -198,6 +173,6 @@ def full_spotify_etl_function(**kwargs):
                     break 
             except:
                 print("Error with database or spotify data returned")
-    run_spotify_etl = run_spotify_etl(config_dictionary)
-spotify_etl_full= full_spotify_etl_function()
+
+    return run_spotify_etl(config_dictionary)
 
