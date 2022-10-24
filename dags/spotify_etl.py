@@ -8,6 +8,7 @@ from datetime import timedelta
 from airflow.operators.python import PythonOperator, BranchPythonOperator
 from airflow.operators.bash import BashOperator
 from airflow.utils.dates import days_ago 
+from airflow.models import xcom_arg
 import pathlib
 import pandas as pd 
 import sqlalchemy 
@@ -33,7 +34,9 @@ default_args = {
 # define our dag 
 @dag(
    'spotify_dag_new',
-   schedule_interval= '@daily'    # default_args = default_args
+   schedule_interval= '@daily',    # default_args = default_args
+    default_args = default_args,
+    tags = ['spotify_example']
     )
 # @task.virtualenv(task_id="virtualenv_python", requirements=["pandas==1.5.0"], system_site_packages=False)
 def full_spotify_etl_function(**kwargs):
@@ -71,7 +74,7 @@ def full_spotify_etl_function(**kwargs):
 
     # ===========================================================
 
-
+    @task(task_id = 'check_data_valid')
     def check_if_valid_data(df:pd.DataFrame) -> bool:
         # check if dataframe is empty, it means there were no songs listened to
         if df.empty:
@@ -83,7 +86,7 @@ def full_spotify_etl_function(**kwargs):
             pass 
         else: 
             raise Exception("Primary Key check if violated")  # here pipeline fail, maybe can send email to me
-        yesterday = datetime.datetime.now() - datetime.timedelta(days = 1)
+        yesterday = datetime.now() - timedelta(days = 1)
         # just check yesterday's date at 0 hour, 0 minute, 0 second and 0 microseconds
         yesterday = yesterday.replace(hour = 0,minute = 0,second =0,microsecond =0 )
         timestamps = df['timestamps'].tolist()
@@ -91,61 +94,69 @@ def full_spotify_etl_function(**kwargs):
         for timestamp in timestamps:
             # strptime --> converts string to time
              # if we catch records that are not yesterday, we want the pipeline to raise exception 
-            if datetime.datetime.strptime(timestamp,"%Y-%m-%d")!= yesterday:
+            if datetime.strptime(timestamp,"%Y-%m-%d")!= yesterday:
                 raise Exception("At least one of the songs does not come within last 24 hours")
         return True
 
     #=====================spotify functions ===============================
-    def create_spotify(config_dictionary):
+    # @task(multiple_outputs = True,task_id = 'create_spotfiy_api_details')
+    def create_spotify_api_details(config_dictionary):
         auth_manager=SpotifyOAuth(scope=config_dictionary['scope'],
                                     client_id =config_dictionary['client_id'] ,
                                     client_secret = config_dictionary['client_secret'],
                                     redirect_uri = config_dictionary['redirect_url'])
 
         spotify = spotipy.Spotify(auth_manager=auth_manager)
-
         return auth_manager,spotify
+        # return {'auth_manager':auth_manager,'spotify':spotify}
 
-    def refresh_spotify(auth_manager, spotify,config_dictionary):
+    # @task(multiple_outputs = True,task_id = 'refresh_spotify_tokens')
+    def refresh_spotify_api_details(auth_manager, spotify,config_dictionary):
 
         token_info = auth_manager.cache_handler.get_cached_token()
 
         if auth_manager.is_token_expired(token_info):
-            auth_manager, spotify = create_spotify(config_dictionary)
-        return auth_manager, spotify
+            auth_manager, spotify = create_spotify_api_details(config_dictionary)
+        return auth_manager,spotify
+        # return {'auth_manager':auth_manager,'spotify':spotify}
     #=====================================================================
 
-
-    def update_database(DB_LOCATION,songs_table):
+    @task(task_id = 'update_database')
+    def update_database(DB_LOCATION,songs_table,value):
         # start database
-        engine = sqlalchemy.create_engine(DB_LOCATION)
-        # conn = sqlite3.connect('james_played_tracks.sqlite')
-        # cursor = conn.cursor()            
-        sql_query = """
-        CREATE TABLE IF NOT EXISTS james_played_tracks(
-            played_at_list VARCHAR(200), 
-            timestamps VARCHAR(200),
-            artist_name VARCHAR(200), 
-            song_names VARCHAR(200),
-            CONSTRAINT primary_key_constraint PRIMARY KEY (played_at_list)
-        )
-        """
-        engine.execute(sql_query)
-        print("Opened database successfully")  
+        if value:
 
-        # update database 
-        try: 
-            songs_table.to_sql(name = 'james_played_tracks',con = engine, if_exists= 'append',index = False)
-        except: 
-            print("Data already exists in database")
-        # conn.close()
-        print("database closed successfully")
+            engine = sqlalchemy.create_engine(DB_LOCATION)
+            # conn = sqlite3.connect('james_played_tracks.sqlite')
+            # cursor = conn.cursor()            
+            sql_query = """
+            CREATE TABLE IF NOT EXISTS james_played_tracks(
+                played_at_list VARCHAR(200), 
+                timestamps VARCHAR(200),
+                artist_name VARCHAR(200), 
+                song_names VARCHAR(200),
+                CONSTRAINT primary_key_constraint PRIMARY KEY (played_at_list)
+            )
+            """
+            engine.execute(sql_query)
+            print("Opened database successfully")  
+
+            # update database 
+            try: 
+                songs_table.to_sql(name = 'james_played_tracks',con = engine, if_exists= 'append',index = False)
+                print("New songs populated in database!")
+            except: 
+                print("Data already exists in database")
+            # conn.close()
+            print("database closed successfully")
+        else: 
+            check_if_valid_data(songs_table)
 
 
     # there's a reason to 
     # https://stackoverflow.com/questions/64202437/airflow-got-an-unexpected-keyword-argument-conf
-    # @task.virtualenv(task_id="virtualenv_python", requirements=["pandas==1.5.0"], system_site_packages=False)
-    def run_spotify_etl(config_dictionary):
+    # @task()
+    # def run_spotify_etl(config_dictionary):
 
        # headers = {
         #     "Accept": "application/json",
@@ -153,52 +164,69 @@ def full_spotify_etl_function(**kwargs):
         #     "Authorization" : "Bearer {token}".format(token=TOKEN)
         # }
 
-        today = datetime.datetime.now().replace(hour = 0,second = 0,minute =0,microsecond=0)
+    today = datetime.now().replace(hour = 0,second = 0,minute =0,microsecond=0)
+    # because everyday we want to see the songs we've listed to for the 
+    # previous 24 hrs
+    yesterday = today - timedelta(days =1)
+    # unix timestamp in miliseconds, that's why need to * 1000
+    yesterday_unix_timestamp = int(yesterday.timestamp()) * 1000
+    # r = requests.get(WEBSITE.format(time=yesterday_unix_timestamp),headers = headers)
+    # get data in json form
+    # data =sp.current_user_recently_played(after =yesterday_unix_timestamp )
+    auth_manager,spotify = create_spotify_api_details(config_dictionary)
+    # spotify_api_details_dict = create_spotify_api_details(config_dictionary)
+    # # print(dir(spotify_api_details_dict))
+    # auth_manager = spotify_api_details_dict['auth_manager']
+    # spotify = spotify_api_details_dict['spotify']
 
-        # because everyday we want to see the songs we've listed to for the 
-        # previous 24 hrs
-        yesterday = today - timedelta(days =1)
-        # unix timestamp in miliseconds, that's why need to * 1000
-        yesterday_unix_timestamp = int(yesterday.timestamp()) * 1000
+    # @task(task_id= "get_data_from_api")
+    def get_data_from_api(spotify,yesterday_unix_timestamp):
+        data = spotify.current_user_recently_played(after =yesterday_unix_timestamp)
+        return data 
 
-        # r = requests.get(WEBSITE.format(time=yesterday_unix_timestamp),headers = headers)
-        # get data in json form
-        # data =sp.current_user_recently_played(after =yesterday_unix_timestamp )
 
-        auth_manager, spotify = create_spotify(config_dictionary)
 
-        while True:
-            auth_manager, spotify = refresh_spotify(auth_manager, spotify,config_dictionary)
-            data = spotify.current_user_recently_played(after =yesterday_unix_timestamp)
+    while True:
+        auth_manager,spotify = refresh_spotify_api_details(auth_manager, spotify,config_dictionary)
 
-            try:
-                # if python not equals to zero 
-                if data['items'] != []:
-                    artist_name = []
-                    song_names = []
-                    played_at_list = []
-                    timestamps = []         
-                    for i in data['items']:
-                        song_names.append(i['track']['name'])
-                        played_at_list.append(i['played_at'])
-                        timestamps.append(i['played_at'][:10])
-                        artist_name.append(i['track']['artists'][0]['name'])            
-                    # data is in dataframe format now
-                    songs_table = pd.DataFrame([played_at_list,timestamps,artist_name,song_names]).T
-                    songs_table.columns = ['played_at_list','timestamps','artist_name','song_names']            
+        # spotify = spotify_api_details_dict['spotify']
+        # print(spotify['spotify'])
+        data = get_data_from_api(spotify,yesterday_unix_timestamp)
+        # data = spotify.current_user_recently_played(after =yesterday_unix_timestamp)
+        try:
+            # if there are any songs, items will not be equals to zero 
+            if data['items'] != []:
+                artist_name = []
+                song_names = []
+                played_at_list = []
+                timestamps = []         
+                for i in data['items']:
+                    song_names.append(i['track']['name'])
+                    played_at_list.append(i['played_at'])
+                    timestamps.append(i['played_at'][:10])
+                    artist_name.append(i['track']['artists'][0]['name'])            
+                # data is in dataframe format now
+                songs_table = pd.DataFrame([played_at_list,timestamps,artist_name,song_names]).T
+                songs_table.columns = ['played_at_list','timestamps','artist_name','song_names']            
+                # update database only if it pass the check 
 
-                    # update database
-                    update_database(config_dictionary['db_location'],songs_table)
+                # update_database(config_dictionary['db_location'],songs_table,check_if_valid_data)
+                value = check_if_valid_data(songs_table)
+                update_database(config_dictionary['db_location'],songs_table,value)
 
-                    # once you updated the database, break out of the loop
-                    break
-                # if there are no data that day, don't even open up the database, skip that day    
-                else:
-                    print("No songs played yesterday")
-                    # if there are no songs, break out 
-                    break 
-            except:
-                print("Error with database or spotify data returned")
-    run_spotify_etl = run_spotify_etl(config_dictionary)
+                # if check_if_valid_data(songs_table):
+                #     update_database(config_dictionary['db_location'],songs_table)
+                # else: 
+                #     print(check_if_valid_data(songs_table))
+                # once you updated the database, break out of the loop
+                break
+            # if there are no data that day, don't even open up the database, skip that day    
+            else:
+                print("No songs played yesterday")
+                # if there are no songs, break out 
+                break 
+        except:
+            print("Error with database or spotify data returned")
+    # run_spotify_etl = run_spotify_etl(config_dictionary)
 spotify_etl_full= full_spotify_etl_function()
 
