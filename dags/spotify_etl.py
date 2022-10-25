@@ -201,10 +201,11 @@ def full_spotify_etl_function(**kwargs):
                 played_at_list = []
                 timestamps = []         
                 for i in data['items']:
-                    song_names.append(i['track']['name'])
-                    played_at_list.append(i['played_at'])
-                    timestamps.append(i['played_at'][:10])
-                    artist_name.append(i['track']['artists'][0]['name'])            
+                    if i['played_at'][:10]!= today.strftime("%Y-%m-%d"):
+                        song_names.append(i['track']['name'])
+                        played_at_list.append(i['played_at'])
+                        timestamps.append(i['played_at'][:10])
+                        artist_name.append(i['track']['artists'][0]['name'])           
                 # data is in dataframe format now
                 songs_table = pd.DataFrame([played_at_list,timestamps,artist_name,song_names]).T
                 songs_table.columns = ['played_at_list','timestamps','artist_name','song_names']            
