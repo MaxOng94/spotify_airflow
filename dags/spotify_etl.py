@@ -89,14 +89,18 @@ def full_spotify_etl_function(**kwargs):
         yesterday = datetime.now() - timedelta(days = 1)
         # just check yesterday's date at 0 hour, 0 minute, 0 second and 0 microseconds
         yesterday = yesterday.replace(hour = 0,minute = 0,second =0,microsecond =0 )
-        timestamps = df['timestamps'].tolist()
+        # timestamps = df['timestamps'].tolist()
+        df = df[df['timestamps']== yesterday.strftime("%Y-%m-%d")]
 
-        for timestamp in timestamps:
-            # strptime --> converts string to time
-             # if we catch records that are not yesterday, we want the pipeline to raise exception 
-            if datetime.strptime(timestamp,"%Y-%m-%d")!= yesterday:
-                raise Exception("At least one of the songs does not come within last 24 hours")
-        return True
+        songs_json= df.to_json()
+
+
+        # for timestamp in timestamps:
+        #     # strptime --> converts string to time
+        #      # if we catch records that are not yesterday, we want the pipeline to raise exception 
+        #     if datetime.strptime(timestamp,"%Y-%m-%d")!= yesterday:
+        #         raise Exception("At least one of the songs does not come within last 24 hours")
+        return songs_json
 
     #=====================spotify functions ===============================
     # @task(multiple_outputs = True,task_id = 'create_spotfiy_api_details')
@@ -122,35 +126,36 @@ def full_spotify_etl_function(**kwargs):
     #=====================================================================
 
     @task(task_id = 'update_database')
-    def update_database(DB_LOCATION,songs_table,value):
+    def update_database(DB_LOCATION,json_data):
         # start database
-        if value:
+        # if value:
 
-            engine = sqlalchemy.create_engine(DB_LOCATION)
-            # conn = sqlite3.connect('james_played_tracks.sqlite')
-            # cursor = conn.cursor()            
-            sql_query = """
-            CREATE TABLE IF NOT EXISTS james_played_tracks(
-                played_at_list VARCHAR(200), 
-                timestamps VARCHAR(200),
-                artist_name VARCHAR(200), 
-                song_names VARCHAR(200),
-                CONSTRAINT primary_key_constraint PRIMARY KEY (played_at_list)
-            )
-            """
-            engine.execute(sql_query)
-            print("Opened database successfully")  
+        songs_table = pd.read_json(json_data)
 
-            # update database 
-            try: 
-                songs_table.to_sql(name = 'james_played_tracks',con = engine, if_exists= 'append',index = False)
-                print("New songs populated in database!")
-            except: 
-                print("Data already exists in database")
-            # conn.close()
-            print("database closed successfully")
-        else: 
-            check_if_valid_data(songs_table)
+        engine = sqlalchemy.create_engine(DB_LOCATION)
+        # conn = sqlite3.connect('james_played_tracks.sqlite')
+        # cursor = conn.cursor()            
+        sql_query = """
+        CREATE TABLE IF NOT EXISTS james_played_tracks(
+            played_at_list VARCHAR(200), 
+            timestamps VARCHAR(200),
+            artist_name VARCHAR(200), 
+            song_names VARCHAR(200),
+            CONSTRAINT primary_key_constraint PRIMARY KEY (played_at_list)
+        )
+        """
+        engine.execute(sql_query)
+        print("Opened database successfully")  
+        # update database 
+        try: 
+            songs_table.to_sql(name = 'james_played_tracks',con = engine, if_exists= 'append',index = False)
+            print("New songs populated in database!")
+        except: 
+            print("Data already exists in database")
+        # conn.close()
+        print("database closed successfully")
+        # else: 
+        #     check_if_valid_data(songs_table)
 
 
     # there's a reason to 
@@ -212,8 +217,8 @@ def full_spotify_etl_function(**kwargs):
                 # update database only if it pass the check 
 
                 # update_database(config_dictionary['db_location'],songs_table,check_if_valid_data)
-                value = check_if_valid_data(songs_table)
-                update_database(config_dictionary['db_location'],songs_table,value)
+                new_songs_table = check_if_valid_data(songs_table)
+                update_database(config_dictionary['db_location'],new_songs_table)
 
                 # if check_if_valid_data(songs_table):
                 #     update_database(config_dictionary['db_location'],songs_table)
