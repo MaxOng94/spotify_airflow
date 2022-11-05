@@ -4,3 +4,4 @@
 venv/
 .ipynb
 configuration/
+.cache
