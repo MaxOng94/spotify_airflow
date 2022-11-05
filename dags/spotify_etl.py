@@ -75,7 +75,7 @@ def full_spotify_etl_function(**kwargs):
     # ===========================================================
 
     @task(task_id = 'check_data_valid')
-    def check_if_valid_data(df:pd.DataFrame) -> bool:
+    def check_if_valid_data(df:pd.DataFrame):
         # check if dataframe is empty, it means there were no songs listened to
         if df.empty:
             print('No songs downloaded. Finishing execution')
