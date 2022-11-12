@@ -129,31 +129,33 @@ def full_spotify_etl_function(**kwargs):
     def update_database(DB_LOCATION,json_data):
         # start database
         # if value:
+        try:
+            songs_table = pd.read_json(json_data)
 
-        songs_table = pd.read_json(json_data)
-
-        engine = sqlalchemy.create_engine(DB_LOCATION)
-        # conn = sqlite3.connect('james_played_tracks.sqlite')
-        # cursor = conn.cursor()            
-        sql_query = """
-        CREATE TABLE IF NOT EXISTS james_played_tracks(
-            played_at_list VARCHAR(200), 
-            timestamps VARCHAR(200),
-            artist_name VARCHAR(200), 
-            song_names VARCHAR(200),
-            CONSTRAINT primary_key_constraint PRIMARY KEY (played_at_list)
-        )
-        """
-        engine.execute(sql_query)
-        print("Opened database successfully")  
-        # update database 
-        try: 
-            songs_table.to_sql(name = 'james_played_tracks',con = engine, if_exists= 'append',index = False)
-            print("New songs populated in database!")
+            engine = sqlalchemy.create_engine(DB_LOCATION)
+            # conn = sqlite3.connect('james_played_tracks.sqlite')
+            # cursor = conn.cursor()            
+            sql_query = """
+            CREATE TABLE IF NOT EXISTS james_played_tracks(
+                played_at_list VARCHAR(200), 
+                timestamps VARCHAR(200),
+                artist_name VARCHAR(200), 
+                song_names VARCHAR(200),
+                CONSTRAINT primary_key_constraint PRIMARY KEY (played_at_list)
+            )
+            """
+            engine.execute(sql_query)
+            print("Opened database successfully")  
+            # update database 
+            try: 
+                songs_table.to_sql(name = 'james_played_tracks',con = engine, if_exists= 'append',index = False)
+                print("New songs populated in database!")
+            except: 
+                print("Data already exists in database")
+            # conn.close()
+            print("database closed successfully")
         except: 
-            print("Data already exists in database")
-        # conn.close()
-        print("database closed successfully")
+            print('No songs downloaded. Finishing execution')
         # else: 
         #     check_if_valid_data(songs_table)
 
