@@ -110,7 +110,7 @@ prison==0.2.1
 prometheus-client==0.14.1
 prompt-toolkit==3.0.29
 psutil==5.9.3
-psycopg2==2.9.4
+# psycopg2==2.9.4
 ptyprocess==0.7.0
 pure-eval==0.2.2
 pycparser==2.21
