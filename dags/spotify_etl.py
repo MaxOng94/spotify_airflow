@@ -26,7 +26,7 @@ default_args = {
     'email_on_failure':True ,
     'email':['max_ong_@outlook.com'],
     'email_on_retry':False,
-    'schedule_interval': '@daily'
+    'schedule': '@daily'
     }
 
 # all operators inherit from the baseoperator 
@@ -34,7 +34,7 @@ default_args = {
 # define our dag 
 @dag(
    'spotify_dag_new',
-   schedule_interval= '@daily',    # default_args = default_args
+   schedule= '@daily',    # default_args = default_args
     default_args = default_args,
     tags = ['spotify_example']
     )
